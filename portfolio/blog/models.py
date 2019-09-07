@@ -3,7 +3,11 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-class job(models.model):	
-	imagae = models.ImageField(upload='images/')
-	summary = models.CharField(max_lenght=200)
- 
+
+class Blog(models.Model):
+	title = models.CharField(max_length=255)
+	pub_date = models.DateTimeField()
+	body = models.TextField()
+	image = models.ImageField(upload_to='images/')
+
+
