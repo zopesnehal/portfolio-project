@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+{% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -12,21 +13,21 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/static/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
   </head>
-  <body>
+  <body> 
     <header><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">nik walter 	</a>
+  <a class="navbar-brand" href="{% url 'home' %}">nik walter 	</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="#">Twiter</a>
-      <a class="nav-item nav-link" href="#">Resume</a>
-      <a class="nav-item nav-link" href="#">Blog</a>
+      <a class="nav-item nav-link" href="http://google.com/">Twiter</a>
+      <a class="nav-item nav-link" href="{% static 'snehalzope.pdf' %}">Resume</a>
+      <a class="nav-item nav-link" href="{% url 'allblogs'%}">Blog</a>
     </div>
   </div> 
 </nav>
@@ -42,6 +43,7 @@
         <a href="mailto:snehalzope1@gmail.coms" class="btn btn-primary my-2">email me</a>
         
       </p>
+      <div ><img style="height: 100px; width: 200px;" src="{% static 'Photo0425.jpg' %}" /></div>
     </div>
   </section>
 
